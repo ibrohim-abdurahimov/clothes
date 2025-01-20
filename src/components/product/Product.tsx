@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Product = () => {
     const { data, isLoading } = useProducts()
-    if (isLoading) return <div>Loading...</div>
+    if (isLoading) return <div className='text-center py-5 text-xl font-semibold'>Loading...</div>
     return (
         <div className='container m-auto px-4'>
             <div className='grid grid-cols-4 gap-5 max-lg:grid-cols-3 max-md:grid-cols-2 '>

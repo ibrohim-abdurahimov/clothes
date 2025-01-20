@@ -27,6 +27,9 @@ const Cart = () => {
     const totalPrice = cart.reduce((total, item) => {
         return total + item.price * item.quantity;
     }, 0)
+    // const handleClearCart = () => {
+    //     dispatch(clearCart());
+    // }
 
     return (
         <div className='mt-5 pb-10 max-md:mt-20'>
@@ -54,7 +57,7 @@ const Cart = () => {
                                 <div className='w-[200px] max-sm:m-auto'>
                                     <img className='object-cover' src={item.urls[0]} alt="" />
                                 </div>
-                                <div className='flex justify-between flex-1'>
+                                <div className='flex justify-between flex-1 max-[475px]:flex-col gap-4'>
                                     <div className='flex flex-col justify-between gap-4'>
                                         <div className='flex flex-col gap-1'>
                                             <h3 className='text-xl font-bold font-serif'>{item.title}</h3>
@@ -63,7 +66,7 @@ const Cart = () => {
                                         </div>
                                         <p className='text-2xl font-bold'>${item.price}</p>
                                     </div>
-                                    <div className='flex flex-col justify-between gap-4 items-end'>
+                                    <div className='flex flex-col justify-between gap-4 items-end max-[475px]:flex-row max-[475px]:items-center'>
                                         <div onClick={() => handleRemove(item.id)} className='cursor-pointer'>
                                             <RiDeleteBin6Fill className='text-2xl text-red-600' />
                                         </div>
@@ -79,21 +82,21 @@ const Cart = () => {
                     </div>
                     <div className='p-6 border rounded-xl flex flex-col justify-between'>
                         <div>
-                            <h2 className='text-2xl font-bold'>Order Summary</h2>
-                            <div className='mt-6 flex justify-between text-xl'>
+                            <h2 className='text-2xl font-bold max-[450px]:text-xl'>Order Summary</h2>
+                            <div className='mt-6 flex justify-between text-xl max-[450px]:text-base'>
                                 <p className='text-[#00000099] '>Delivery Fee</p>
                                 <p className='font-bold'>$15</p>
                             </div>
-                            <div className='mt-6 flex justify-between text-xl'>
+                            <div className='mt-6 flex justify-between text-xl max-[450px]:text-base'>
                                 <p className='text-[#00000099] '>Subtotal</p>
                                 <p className='font-bold'>${totalPrice}</p>
                             </div>
-                            <div className='mt-6 flex justify-between text-xl'>
+                            <div className='mt-6 flex justify-between text-xl max-[450px]:text-base'>
                                 <p>Total</p>
                                 <p className='font-bold'>${totalPrice + 15}</p>
                             </div>
                         </div>
-                        <button className='mt-6 block w-full rounded-xl py-5 px-36 text-center bg-black text-white'>Go to Checkout</button>
+                        <button className='mt-6 block w-full rounded-xl py-5 text-center bg-black text-white'>Go to Checkout</button>
                     </div>
                 </div>
             </div>
