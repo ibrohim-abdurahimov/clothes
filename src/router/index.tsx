@@ -5,6 +5,7 @@ import Home from '../pages/home/Home'
 import Detail from '../pages/detail/Detail'
 import Cart from '../pages/cart/Cart'
 import Comment from '../components/comment/Comment'
+import Check from '../pages/check/Check'
 
 const Routers = () => {
   return (
@@ -30,6 +31,10 @@ const Routers = () => {
                         {
                             path: '/cart',
                             element: <Cart/>
+                        },
+                        {
+                            path: '/check',
+                            element: <Check/>
                         },
                         {
                             path: '*',

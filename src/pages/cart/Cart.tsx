@@ -25,12 +25,8 @@ const Cart = () => {
         dispatch(decrementItem(id));
     };
     const totalPrice = cart.reduce((total, item) => {
-        return total + item.price * item.quantity;
+        return total + item.price * item.quantity
     }, 0)
-    // const handleClearCart = () => {
-    //     dispatch(clearCart());
-    // }
-
     return (
         <div className='mt-5 pb-10 max-md:mt-20'>
             <div className='container m-auto px-4'>
