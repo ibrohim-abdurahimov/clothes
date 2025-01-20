@@ -1,7 +1,5 @@
 import { } from 'react'
 import './App.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { inc, dec } from './redux/slice/counter-slice'
 import Routers from './router'
 
 function App() {

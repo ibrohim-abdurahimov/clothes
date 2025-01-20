@@ -1,5 +1,4 @@
 import { memo } from 'react'
-import { useComment } from '../../redux/api'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useQuery } from 'react-query'
